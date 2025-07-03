@@ -47,6 +47,19 @@ class Student {
     }
 };
 
+// data hiding. using encapsulation
+class Account {
+    private: 
+        double balance;
+        string password; // data hiding
+
+    public: // access specifier
+        string accountNumber;
+        string accountHolderName;
+};
+
+
+
 int main(){
     Teacher t1; // create an object of class Teacher
     t1.name = "ballu";
