@@ -13,8 +13,8 @@ class Student {
         }
 
         Student(Student &obj){
-            this->name = obj.name;
-            this->cgpaPtr = obj.cgpaPtr;
+            cgpaPtr = new double;
+            *cgpaPtr = *obj.cgpaPtr;
         }
 
         void getInfo(){
@@ -31,6 +31,10 @@ int main(){
     s1.getInfo();
     *(s2.cgpaPtr) = 9.3;
     s1.getInfo();
-    return 0;
 
+    s2.name = "badal";
+    s2.getInfo();
+
+
+    return 0;
 }
